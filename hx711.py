@@ -161,6 +161,7 @@ class HX711:
         self.lastVal = signedIntValue
 
         # Return the sample value we've read from the HX711.
+        #print(signedIntValue)
         return int(signedIntValue)
 
     
@@ -230,7 +231,7 @@ class HX711:
 
 
     def get_value_A(self, times=3):
-        return self.read_median(times) - self.get_offset_A()
+        return -(self.read_median(times) - self.get_offset_A())
 
 
     def get_value_B(self, times=3):
