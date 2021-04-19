@@ -161,7 +161,6 @@ class HX711:
         self.lastVal = signedIntValue
 
         # Return the sample value we've read from the HX711.
-        #print(signedIntValue)
         return int(signedIntValue)
 
     
@@ -231,7 +230,7 @@ class HX711:
 
 
     def get_value_A(self, times=3):
-        return -(self.read_median(times) - self.get_offset_A())
+        return self.read_median(times) - self.get_offset_A()
 
 
     def get_value_B(self, times=3):
@@ -260,7 +259,7 @@ class HX711:
     
     # Sets tare for channel A for compatibility purposes
     def tare(self, times=15):
-        self.tare_A(times)
+        return self.tare_A(times)
     
     
     def tare_A(self, times=15):
