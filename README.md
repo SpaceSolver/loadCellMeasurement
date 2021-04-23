@@ -30,3 +30,13 @@ get_value_B() and get_weight_B() functions do this for you.
 This info was obtained from an HX711 datasheet located at
 https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/hx711_english.pdf
 
+# loadCellMeasurement
+
+# 読んだ結果
+
+## HX711 class
+
+* get_weight メソッド
+   * 引数に指定した回数分ロードセルを読む
+      * デフォルト値 := 3
+   * 読んだ結果をソートして、*中央値*を採用する
